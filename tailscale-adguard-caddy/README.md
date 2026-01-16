@@ -82,6 +82,7 @@ openssl x509 -req -in intermediate.csr -CA rootCA.crt -CAkey root.key \
 ## Signing 
 
 Firefox and Apple devices also require that certificates explicitly list all domains in the Subject Alternative Name (SAN) field. If a domain isn’t included there, the site won’t be trusted.
+It is also worth mentioning, for Apple, it isn't enough to install the certificate profile. You must also navigate to About -> Certificate Trust Settings and enable it from there.
 
 Here's what that would look like:
 
